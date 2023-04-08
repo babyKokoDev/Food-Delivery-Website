@@ -130,7 +130,7 @@ export const data = [
         id : 19,
         name : 'Fruit Salad',
         category : 'Fruits',
-        image : 'https://guardian.ng/wp-content/uploads/2016/04/Small-Chops.jpg',
+        image : 'https://simplysidedishes.com/wp-content/uploads/2020/07/Fruit-Salad-Finished-Up-Close-scaled.jpg',
         price : 13
     },
     {

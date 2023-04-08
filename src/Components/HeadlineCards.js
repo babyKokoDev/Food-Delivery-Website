@@ -11,7 +11,7 @@ const HeadlineCards = () => {
                   <p className='px-2 '>Through 8/26</p>
                   <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
             </div>
-            <img className='max-h-[200px] md:max-h-[200px] w-full object-cover rounded-xl' src="https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img className='max-h-[250px] md:max-h-[250px] w-full object-cover rounded-xl' src="https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
         </div>
         <div className='rounded-xl relative'>
             {/* Overlay */}
@@ -20,7 +20,7 @@ const HeadlineCards = () => {
                   <p className='px-2 font-bold text-[pink] text-1xl'>Added Daily</p>
                   <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
             </div>
-            <img className='max-h-[200px] md:max-h-[200px] w-full object-cover rounded-xl' src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img className='max-h-[250px] md:max-h-[250px] w-full object-cover rounded-xl' src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
         </div>
         <div className='rounded-xl relative'>
             {/* Overlay */}
@@ -29,7 +29,7 @@ const HeadlineCards = () => {
                   <p className='px-2 font-bold text-[skyblue] text-1xl'>Tasty Treats</p>
                   <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Order Now</button>
             </div>
-            <img className='max-h-[200px] md:max-h-[200px] w-full object-cover rounded-xl' src="https://ocdn.eu/pulscms-transforms/1/vHwktkqTURBXy8xMGU2MTFjNDAxMWE5NDk2ODE1ZjFjMzVjOGM1YzNmNS5qcGVnkpUDAA7NApTNAXOTBc0EsM0Cdg" alt="" />
+            <img className='max-h-[250px] md:max-h-[250px] w-full object-cover rounded-xl' src="https://ocdn.eu/pulscms-transforms/1/vHwktkqTURBXy8xMGU2MTFjNDAxMWE5NDk2ODE1ZjFjMzVjOGM1YzNmNS5qcGVnkpUDAA7NApTNAXOTBc0EsM0Cdg" alt="" />
         </div>
     </div>
   )
