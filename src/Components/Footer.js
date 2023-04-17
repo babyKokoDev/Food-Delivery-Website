@@ -6,7 +6,7 @@ import { TfiPinterest } from "react-icons/tfi"
 
 const Footer = () => {
     return (
-        <div className="max-w-[1640px] m-auto py-10 md:px-12 md:py-12 bg-[#F8C495]">
+        <div className="max-w-[1320px] mx-auto py-10 md:px-12 md:py-12 bg-[#F8C495]">
             <div className="grid gap-10 md:grid-cols-4">
                 <div className="flex flex-col items-center">
                     <div className="mb-4">

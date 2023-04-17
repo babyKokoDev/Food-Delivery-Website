@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiFillHome } from "react-icons/ai";
 import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet, FaInfoCircle } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+  const navigate = useNavigate()
+    const goHome = () => {
+         navigate('/')
+    }
 
     const [nav, setNav] = useState(false)
     return (
@@ -26,8 +31,8 @@ const Navbar = () => {
                 <AiOutlineSearch size={20} />
                 <input className="bg-transparent p-2 w-full focus:outline-none" type="text" placeholder="Search foods" name="" id="" />
             </div>
-            <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
-                <BsFillCartFill size={20} className="mr-2" /> Cart
+            <button onClick={goHome} className="bg-orange-500 border-none text-white hidden md:flex items-center py-2 rounded-full">
+                <AiFillHome size={20} className="mr-2" /> Home
             </button>
             {nav ? <div onClick={() => setNav(!nav)} className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0"></div> : ''}
             <div className={nav ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
@@ -37,7 +42,7 @@ const Navbar = () => {
                 </h2>
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
-                        <li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About</li>
+                        <Link to="/about"><li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About</li></Link>
                         <li className="text-xl py-4 flex"><MdFavorite size={25} className="mr-4" /> Favourites</li>
                         <li className="text-xl py-4 flex"><FaWallet size={25} className="mr-4" /> Wallets</li>
                         <li className="text-xl py-4 flex"><MdHelp size={25} className="mr-4" /> Help</li>
