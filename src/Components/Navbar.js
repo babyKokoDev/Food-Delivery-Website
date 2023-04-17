@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from "react-icons/ai";
 import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
-import { FaUserFriends, FaWallet } from "react-icons/fa";
+import { FaUserFriends, FaWallet, FaInfoCircle } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </h2>
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
-                        <li className="text-xl py-4 flex"><TbTruckDelivery size={25} className="mr-4" /> Orders</li>
+                        <li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About</li>
                         <li className="text-xl py-4 flex"><MdFavorite size={25} className="mr-4" /> Favourites</li>
                         <li className="text-xl py-4 flex"><FaWallet size={25} className="mr-4" /> Wallets</li>
                         <li className="text-xl py-4 flex"><MdHelp size={25} className="mr-4" /> Help</li>
