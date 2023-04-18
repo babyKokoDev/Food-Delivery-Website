@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { data } from '../data/data'
+import { myPublicKey } from '../data/key';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
-
-
-  
+import { PaystackButton } from 'react-paystack';
+import Swal from 'sweetalert2'
+ 
 
 const FoodOrder = () => {
     const [num, setNum] = useState(1)
@@ -23,6 +24,39 @@ const FoodOrder = () => {
 
 
     // Payment Method
+  const publicKey = myPublicKey
+  const amount = userData.price*num*100*750
+  const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+
+  const componentProps = {
+    email,
+    amount,
+    metadata: {
+      name,
+      phone,
+    },
+    publicKey,
+    text: "Pay Now",
+    onSuccess: () => {
+        Swal.fire(
+            'Transaction Successful',
+            '🧶🧶🧶🧶🧶🧶🧶',
+            'success'
+          )
+          setShowModal(false)
+    }
+      ,
+    onClose: () => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!'
+          })
+          setShowModal(false)
+    },
+  }
   
 
 
@@ -86,10 +120,12 @@ const FoodOrder = () => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto w-[300px] md:w-[700px]">
-                   <form action="" id='paymentForm'>
-                    <input type="email" placeholder='Email Address' className='w-full border border-slate-200 p-2 rounded-xl mb-4' required/>
-                    <input type="text" placeholder='First Name' className='w-full border border-slate-200 p-2 rounded-xl mb-3' required />
-                    <input type="text" placeholder='Last Name' className='w-full border border-slate-200 p-2 rounded-xl mb-3' required />
+                   <form>
+                    <input type="email" placeholder='Email Address' className='w-full border border-slate-200 p-2 rounded-xl mb-4' id="email" onChange={(e) => setEmail(e.target.value)} required/>
+                    <input type="text" placeholder='Full Name' className='w-full border border-slate-200 p-2 rounded-xl mb-3' id="name" onChange={(e) => setName(e.target.value)} required />
+                    <input type="number" placeholder='Phone Number' className='w-full border border-slate-200 p-2 rounded-xl mb-3' id="phone" onChange={(e) => setPhone(e.target.value)} required />
+                    </form>
+                    
 
                     <div className='mx-auto text-center mb-4 mt-4 text-xl text-green-600'>Amount : ${userData.price*num}</div>
 
@@ -101,15 +137,10 @@ const FoodOrder = () => {
                   >
                     Close
                   </button>
-                  <button
-                    type="submit" onclick={payWithPaystack}
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 border-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Pay Now
-                  </button>
+                  <PaystackButton className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 border-none" {...componentProps} />
+                  
                 </div>
-                   </form>
+                  
                 </div>
                 {/*footer*/}
               </div>
