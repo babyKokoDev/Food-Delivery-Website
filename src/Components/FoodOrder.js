@@ -22,7 +22,7 @@ const FoodOrder = () => {
     <>
         <Navbar />
           
-          <div className='max-w-[1320px] mx-auto p-10 my-10'>
+          <div className='max-w-[1320px] mx-auto p-3 md:p-10 my-10'>
             <h1 className='mb-5 text-center font-bold text-blue-700 text-4xl'>ORDER NOW</h1>
               <div className='grid md:grid-cols-2 gap-10'>
                   <div>

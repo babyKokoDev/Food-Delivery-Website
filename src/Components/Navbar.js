@@ -32,9 +32,9 @@ const Navbar = () => {
                 <AiOutlineSearch size={20} />
                 <input className="bg-transparent p-2 w-full focus:outline-none" type="text" placeholder="Search foods" name="" id="" />
             </div>
-            <button onClick={goHome} className="bg-orange-500 border-none text-white hidden md:flex items-center py-2 rounded-full">
-                <AiFillHome size={20} className="mr-2" /> Home
-            </button>
+            <div className='w-[300px] text-xl text-orange-500 hidden md:block'>
+                <marquee behavior="" direction="left">Welcome to our African Restaurant, You can find all sorts of african food of your choice</marquee>  
+            </div>
             {nav ? <div onClick={() => setNav(!nav)} className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0"></div> : ''}
             <div className={nav ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
                 <AiOutlineClose onClick={() => setNav(!nav)} size={30} className="absolute right-4 top-4 cursor-pointer" />
