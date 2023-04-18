@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data/data'
-import { myPublicKey } from '../../key';
+import { myPublicKey } from '../data/key';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';

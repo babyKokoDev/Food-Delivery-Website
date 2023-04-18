@@ -1,1 +1,0 @@
-export const myPublicKey = "pk_test_90a75260ee46c9e1d1f52175777258f1d3872e3a"
