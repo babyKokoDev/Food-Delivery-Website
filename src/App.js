@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import AboutPage from './Components/AboutPage';
 import SignInPage from './Components/SignInPage';
 import ContactPage from './Components/ContactPage';
+import FoodOrder from './Components/FoodOrder';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Route path = "/about" element = {<AboutPage />} />
           <Route path='/signin' element={<SignInPage />} />
           <Route path='/contact' element={<ContactPage />} />
-
+          <Route path = '/foodOrder' element={<FoodOrder />}>
+          <Route path=':foodId' element={<FoodOrder />} />
+          </Route>
         </Routes>
     </>
   );

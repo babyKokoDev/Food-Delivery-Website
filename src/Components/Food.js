@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data/data'
+import { Link } from 'react-router-dom'
 
 const Food = () => {
 
@@ -115,6 +116,7 @@ const priceCatFour = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  pt-4'>
            {
                foods.map((item, index)=> (
+                <Link to= {`/foodOrder/${item.id}`} key={index}>
                   <div key={index} className="border rounded-lg shadow-xl hover:scale-105 duration-300">
                       <img src={item.image} alt={item.name} className="w-full h-[300px] object-cover rounded-t-lg" />
                       <div className='flex justify-between align-center bg-orange-200 rounded-b-lg px-2 py-4'>
@@ -124,6 +126,7 @@ const priceCatFour = () => {
                           </p>
                       </div>
                   </div>
+                  </Link>
                ))
            }
         </div>

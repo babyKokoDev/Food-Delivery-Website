@@ -1,5 +1,7 @@
 import React from 'react'
 import { categories } from '../data/data'
+import { Link } from 'react-router-dom'
+import FoodOrder from './FoodOrder'
 
 const Category = () => {
   return (
@@ -8,7 +10,7 @@ const Category = () => {
         <div className='grid grid-cols-2 md:grid-cols-4 gap-6 py-6'>
             {
                 categories.map((item, index)=>(
-                    <div key={index} className="bg-gray-100 rounded-lg p-4 flex justify-between items-center hover:scale-105 duration-300">
+                    <div key={index} className="bg-gray-100 rounded-lg p-4 flex justify-between items-center hover:scale-105 duration-300 cursor-pointer">
                        <h2>{item.name}</h2>
                        <img src={item.image} alt={item.name} className="w-20" />
                     </div>
