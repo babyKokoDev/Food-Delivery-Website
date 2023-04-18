@@ -8,7 +8,7 @@ const ContactPage = () => {
     <Navbar />
     <div className='text-center italic mt-20 mb-5 text-3xl text-pink-500'>CONTACT</div>
     <div className='max-w-[800px] bg-white mx-auto p-10 mb-20 rounded-[20px] shadow-lg shadow-black/20'>
-         <div className='mb-3'>
+         <div className='mb-3 ms-3'>
             <h1 className='font-semibold text-xl'>Contact Us</h1>
             <p>Leave your message and we'll get back to you shortly.</p>
          </div>
