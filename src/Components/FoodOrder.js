@@ -35,8 +35,9 @@ const FoodOrder = () => {
                          <span className='mx-4 border-slate-700 border px-5 text-2xl'>{num}</span>
                          <span onClick={increase} className='cursor-pointer hover:bg-slate-500 p-2'><AiOutlinePlus  size={30}/></span>
                     </div>
-                    <div className='mt-4 w-[50%] mx-auto bg-slate-400 shadow-lg py-2 text-white text-2xl'>${userData.price*num}</div>
-                    <button className='mt-4 w-[50%] mx-auto bg-[#D75127] shadow-lg py-2 text-white border-none rounded-none hover:scale-105 text-2xl'>Buy it now</button>
+                    <div className='mt-4 w-full  md:w-[50%] mx-auto bg-slate-400 shadow-lg py-2 text-white text-2xl'>${userData.price*num}</div>
+                    <button className='mt-4 w-full  md:w-[50%] mx-auto bg-[#D75127] shadow-lg py-2 text-white border-none rounded-none hover:scale-105 text-2xl'>Buy it now</button>
+                    <div className='mt-4 text-orange-600 text-xl'>{userData.description}</div>
                   </div>
               </div>
           </div>
