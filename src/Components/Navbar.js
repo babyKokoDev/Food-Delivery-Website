@@ -32,8 +32,8 @@ const Navbar = () => {
                 <AiOutlineSearch size={20} />
                 <input className="bg-transparent p-2 w-full focus:outline-none" type="text" placeholder="Search foods" name="" id="" />
             </div>
-            <div className='w-[300px] text-xl text-orange-500 hidden md:block'>
-                <marquee behavior="" direction="left">Welcome to our African Restaurant, You can find all sorts of african food of your choice</marquee>  
+            <div className='w-[350px] text-xl text-orange-500 hidden md:block'>
+                <marquee behavior="scroll" direction="left">Welcome to our African Restaurant, You can find all sorts of African Foods of your choice</marquee>  
             </div>
             {nav ? <div onClick={() => setNav(!nav)} className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0"></div> : ''}
             <div className={nav ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
@@ -43,13 +43,10 @@ const Navbar = () => {
                 </h2>
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
-                        <Link to="/about"><li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About</li></Link>
+                        <Link to="/about"><li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About Us</li></Link>
                         <Link to="/signin"><li className="text-xl py-4 flex cursor-pointer"><SlLogin size={25} className="mr-4" /> Sign In</li></Link>
                         <Link to="/contact"><li className="text-xl py-4 flex"><FaPhone size={25} className="mr-4" /> Contact Us</li></Link>
-                        <li className="text-xl py-4 flex"><MdHelp size={25} className="mr-4" /> Help</li>
-                        <li className="text-xl py-4 flex"><AiFillTag size={25} className="mr-4" /> Promotions</li>
-                        <li className="text-xl py-4 flex"><BsFillSaveFill size={25} className="mr-4" /> Best Ones</li>
-                        <li className="text-xl py-4 flex"><FaUserFriends size={25} className="mr-4" /> Invite Friends</li>
+                        <Link to="/"><li className="text-xl py-4 flex cursor-pointer"><AiFillHome size={25} className="mr-4" /> Home</li></Link>
                     </ul>
                 </nav>
             </div>
