@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-const SignInPage = () => {
+const ContactPage = () => {
   return (
     <>
     <Navbar />
@@ -35,4 +35,4 @@ const SignInPage = () => {
   )
 }
 
-export default SignInPage
+export default ContactPage
