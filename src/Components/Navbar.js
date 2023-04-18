@@ -3,6 +3,7 @@ import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiFillHome }
 import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet, FaInfoCircle } from "react-icons/fa";
+import { SlLogin } from "react-icons/sl";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -43,7 +44,7 @@ const Navbar = () => {
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
                         <Link to="/about"><li className="text-xl py-4 flex cursor-pointer"><FaInfoCircle size={25} className="mr-4" /> About</li></Link>
-                        <li className="text-xl py-4 flex"><MdFavorite size={25} className="mr-4" /> Favourites</li>
+                        <Link to="/signin"><li className="text-xl py-4 flex cursor-pointer"><SlLogin size={25} className="mr-4" /> Sign In</li></Link>
                         <li className="text-xl py-4 flex"><FaWallet size={25} className="mr-4" /> Wallets</li>
                         <li className="text-xl py-4 flex"><MdHelp size={25} className="mr-4" /> Help</li>
                         <li className="text-xl py-4 flex"><AiFillTag size={25} className="mr-4" /> Promotions</li>
