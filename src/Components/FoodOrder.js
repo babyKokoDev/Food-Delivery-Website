@@ -73,7 +73,7 @@ const FoodOrder = () => {
             <h1 className='mb-5 text-center font-bold text-blue-700 text-4xl'>ORDER NOW</h1>
               <div className='grid md:grid-cols-2 gap-10'>
                   <div>
-                    <img src={userData.image} className='w-full h-[400px] object-cover' alt="" />
+                    <img src={userData.image} className='w-full h-[400px] object-cover shadow-lg' alt="" />
                   </div>
                   <div className='text-center px-2'>
                     <p className='text-slate-700 text-3xl mb-3'>{userData.name}</p>
