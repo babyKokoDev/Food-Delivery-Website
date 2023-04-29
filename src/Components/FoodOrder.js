@@ -13,11 +13,12 @@ import Swal from 'sweetalert2'
 
 const FoodOrder = () => {
 
-  const { pathname } = useLocation();
+  const { pathname }  = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
 
   const [num, setNum] = useState(1)
   const [showModal, setShowModal] = React.useState(false);
