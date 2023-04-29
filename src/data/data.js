@@ -100,7 +100,7 @@ export const data = [
         id : 13,
         name : 'Semovita',
         category : 'Swallow',
-        image : 'https://gtfoodsplus.com/wp-content/uploads/2020/05/Semo-and-Egusi-with-Beef.jpg',
+        image : 'https://anmg-production.anmg.xyz/yazanigeria_1F5PSHUw349JXb3Nf8nvvUJ1',
         price : 21,
         description : 'Golden Penny Semovita is very good for your health. Golden Penny Semovita is a superior quality brand of Semolina made from the finest quality wheat. It is fortified with proteins and vitamins, which makes it even more nutritious, providing the added vitality for your daily activities. One of the many distinguishing traits of Golden Penny Semovita is its natural wheat color because of the high bran and fiber content retained during extraction. It undergoes the best milling technology that ensures the wholesome components are not bleached away but rather retained, giving you a much healthier meal that is easy to digest and allows for free bowel movements. With its carefully selected combination of finest quality nutrients – fiber, vitamins, proteins, low fat, and easily digestible carbohydrates – Golden Penny Semovita is truly the secret of healthy living! Golden Penny Semovita flour is enriched, meaning that the food is manufactured with nutrients that were lost during the processing of the durum wheat grain. Enriched semolina contains higher levels of vitamins and minerals than unenriched alternatives. Enriched semolina flour is nutritious and provides high levels of various B vitamins, iron, protein, and fiber.'
     },
