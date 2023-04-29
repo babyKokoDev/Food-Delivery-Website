@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { data } from '../data/data'
-import { myPublicKey } from '../data/key';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -11,7 +10,9 @@ import { PaystackButton } from 'react-paystack';
 import Swal from 'sweetalert2'
 
 
+
 const FoodOrder = () => {
+  console.log(process.env) 
 
   const { pathname }  = useLocation();
 
@@ -34,7 +35,7 @@ const FoodOrder = () => {
 
 
   // Payment Method
-  const publicKey = myPublicKey
+  const publicKey = process.env.REACT_APP_PAYSTACK_KEY
   const amount = userData.price * num * 100 * 750
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
