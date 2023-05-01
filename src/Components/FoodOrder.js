@@ -12,7 +12,6 @@ import Swal from 'sweetalert2'
 
 
 const FoodOrder = () => {
-  console.log(process.env) 
 
   const { pathname }  = useLocation();
 
